@@ -1,0 +1,87 @@
+<!--<ion-header>-->
+  <!--<ion-navbar>-->
+    <!--<ion-title>首页</ion-title>-->
+  <!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<div class="home-bar">
+
+<ion-slides  autoplay="4600" loop=true pager=true>
+  <ion-slide>
+    <img src="assets/imgs/1.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="assets/imgs/2.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="assets/imgs/3.jpg">
+  </ion-slide>
+</ion-slides>
+
+<!--tab切换-->
+<ion-toolbar no-border-top >
+  <ion-segment [(ngModel)]="pet">
+
+    <ion-segment-button *ngFor="let val of tbasArr" value="{{val.text}}">
+    {{val.name}}
+    </ion-segment-button>
+
+  </ion-segment>
+</ion-toolbar>
+
+</div>
+
+<ion-content  class="home">
+  <!--下拉刷新-->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+           pullingIcon="arrow-dropdown"
+          pullingText="下拉松开刷新"
+          refreshingSpinner="circles"
+          refreshingText="loading...">
+         </ion-refresher-content>
+      </ion-refresher>
+
+
+
+  <!--图片撑起高度-->
+  <img src="assets/imgs/3.jpg" class="img-width">
+  <div class="home-brace-height"></div>
+
+
+  <!--内容-->
+
+
+
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'left'">
+        <div *ngFor="let str of [1,2,3,4,5,6,7,8,9,10]" (click)="tabsLeft()">
+        <ion-item >
+          <ion-thumbnail item-start>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520096002372&di=f326209d2d720256eed51ccb76083b95&imgtype=0&src=http%3A%2F%2Fwww.igeek.com.cn%2Fuploads%2F2018%2F03%2F02%2Fa96d8ef0d8dc8c43fa2ecb1bc429e5e4.jpeg">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+
+        </div>
+
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'right'">
+        <div *ngFor="let str of [1,2,3,4,5,6,7,8]" (click)="tabsRight()">
+        <ion-item >
+          <ion-thumbnail item-start>
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520096002372&di=f326209d2d720256eed51ccb76083b95&imgtype=0&src=http%3A%2F%2Fwww.igeek.com.cn%2Fuploads%2F2018%2F03%2F02%2Fa96d8ef0d8dc8c43fa2ecb1bc429e5e4.jpeg">
+          </ion-thumbnail>
+          <h2>{{str}}</h2>
+        </ion-item>
+
+        </div>
+      </ion-list>
+
+
+    </div>
+
+
+</ion-content>

@@ -1,0 +1,43 @@
+page-home {
+  .swiper-container {
+    height: auto !important;
+  }
+  .home{
+    background-color:#f8f8f8;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .img-width{
+    width: 100%;
+    height: auto;
+    opacity:0;
+  }
+  ion-slides {
+    height: auto !important;
+
+  }
+  .home-bar{
+    position: relative;
+    z-index:6;
+    background-color:#f8f8f8;
+  }
+  .home-brace-height{
+    height:44px;
+  }
+
+  ion-refresher{
+    margin-top:260px !important;
+    position: relative !important;
+    z-index:999 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: rgba(191, 191, 191, 0.53) !important;
+    opacity: 1;
+  }
+  .toolbar-ios .segment-button {
+    max-width: 42% !important;
+  }
+}
