@@ -20,6 +20,8 @@ import { HomeListValDetailsPage } from '../pages/home-list-val-details/home-list
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+
 //服务
 import { ServeProvider } from '../providers/serve/serve';
 
