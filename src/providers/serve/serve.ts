@@ -37,7 +37,7 @@ export class ServeProvider {
   rxjsPostRequestInterface(data:any):Observable<any>{
 
     return this.http   //post请求 http://218.29.141.170:8880/SmartHospitalSystem/hospitalInfo/findHospitalImage
-      .post('http://www.tuling123.com/openapi/api',data,httpOptions)//this.options
+      .post('http://apis.juhe.cn/cook/query',data,httpOptions)//this.options
       .map((res:any)=>{
         return res;
       })

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 //数据请求模块
-import { HttpClientModule ,HttpClient,HttpHandler} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
