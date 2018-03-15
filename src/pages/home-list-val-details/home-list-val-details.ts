@@ -7,7 +7,7 @@ import { TabsPage } from '../../pages/tabs/tabs';
 
 //服务
 import { ServeProvider } from "../../providers/serve/serve";
-import { HttpParams} from '@angular/common/http';
+import { HttpParams ,} from '@angular/common/http';
 
 
 /**
@@ -53,7 +53,9 @@ export class HomeListValDetailsPage {
       this.serveProvider.rxjsPostRequestInterface(this.getStartHTTPDataObj)
       .subscribe(value=>{
           console.log(value);
+          alert(JSON.stringify(value));
       },error=>{
+          alert('失败回调')
           console.log('失败回调');
       })
   }
