@@ -36,7 +36,7 @@ export class HomeListValPage {
   }
 
   //请求接口
-  private params = new HttpParams().set('key', '2612c5cc42c4408bbc1dbc1f7e7b73f0').set('info', '你的名字叫什么');
+   params = new HttpParams().set('key', '2612c5cc42c4408bbc1dbc1f7e7b73f0').set('info', '你的名字叫什么');
   
   
   rxjsGetRequestInterfaceFun(){//get
