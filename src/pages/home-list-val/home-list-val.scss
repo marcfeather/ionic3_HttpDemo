@@ -1,5 +1,23 @@
 page-home-list-val {
         .list-val-button{
-            width:50px;
+           width:100%;
+           height:50px;
+           background:#008ee8;
+           color:#fff;
+        }
+        .listValBottomButtondiv{
+            position:absolute;
+            width:100%;
+            height:50px;
+            bottom:0;
+        }
+          .listValBottomButton{
+            background:#008ee8;
+            color:#fff;
+            width:100%;
+            height:50px;
+            bottom:0;
+            position:relative;
+            z-index:3;
         }
 }

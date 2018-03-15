@@ -31,7 +31,12 @@ export class HomeListValDetailsPage {
   stateGoHome(){
     this.navCtrl.push(TabsPage, {
       id : "test" //传值
-});
+    });
+  }
+
+  //获取数据
+  getStartHTTPData(){
+      console.log('test');
   }
 
 }
