@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 //数据请求模块
-import { HttpClientModule ,HttpClientJsonpModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -49,7 +49,7 @@ import { ServeProvider } from '../providers/serve/serve';
   ],
   imports: [
     BrowserModule,
-
+    HttpClientModule,
     IonicModule.forRoot(MyApp,{
       backButtonText: '',//按钮内容
       backButtonIcon: 'ios-arrow-back',//按钮图标样式
@@ -78,10 +78,11 @@ import { ServeProvider } from '../providers/serve/serve';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     ServeProvider,
     HttpClientModule,
-    HttpClientJsonpModule,
+    
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+  
   ]
 })
 export class AppModule {}

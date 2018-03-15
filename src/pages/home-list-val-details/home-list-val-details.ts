@@ -5,6 +5,10 @@ import { HomePage } from '../../pages/home/home';
 import { TabsPage } from '../../pages/tabs/tabs';
 
 
+//服务
+import { ServeProvider } from "../../providers/serve/serve";
+import { HttpParams ,} from '@angular/common/http';
+
 
 /**
  * Generated class for the HomeListValDetailsPage page.
@@ -19,8 +23,8 @@ import { TabsPage } from '../../pages/tabs/tabs';
   templateUrl: 'home-list-val-details.html',
 })
 export class HomeListValDetailsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  postHttpDataArr=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider) {
   }
 
   ionViewDidLoad() {
@@ -31,7 +35,30 @@ export class HomeListValDetailsPage {
   stateGoHome(){
     this.navCtrl.push(TabsPage, {
       id : "test" //传值
-});
+    });
+  }
+
+  //获取数据
+  getStartHTTPDataObj={
+     key:'2612c5cc42c4408bbc1dbc1f7e7b73f0',
+     info:'讲个故事',
+  }
+ 
+   params = new HttpParams().set('key', '2612c5cc42c4408bbc1dbc1f7e7b73f0').set('info', '你的名字叫什么');
+  
+  getStartHTTPData(){
+    console.log(this.getStartHTTPDataObj);
+    
+      console.log('test');
+      this.serveProvider.rxjsPostRequestInterface(this.getStartHTTPDataObj)
+      .subscribe(value=>{
+          console.log(value);
+          this.postHttpDataArr.splice(0,0,value.text);
+          //alert(JSON.stringify(value));
+      },error=>{
+          //alert('失败回调')
+          console.log('失败回调');
+      })
   }
 
 }

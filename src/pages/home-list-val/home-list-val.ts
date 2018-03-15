@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
@@ -21,12 +21,17 @@ import { HttpParams} from '@angular/common/http';
   templateUrl: 'home-list-val.html',
 })
 export class HomeListValPage {
-
+  //inpit 值
+  //@Input()
+  inpitVal:string;
+  RobotReply=[];
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider){
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(){
     console.log('ionViewDidLoad HomeListValPage');
+    
   }
 
   stateGoDetails(){
@@ -36,17 +41,23 @@ export class HomeListValPage {
   }
 
   //请求接口
-   params = new HttpParams().set('key', '2612c5cc42c4408bbc1dbc1f7e7b73f0').set('info', '你的名字叫什么');
-  
-  
+  private params = new HttpParams().set('key', '2612c5cc42c4408bbc1dbc1f7e7b73f0').set('info', '你的名字叫什么');
+  myData(){
+    return (new Date())+'      ';
+  }
+ 
   rxjsGetRequestInterfaceFun(){//get
-    console.log('233');
-    this.serveProvider.rxjsPostRequestInterface(this.params)
+    this.serveProvider.rxjsGetRequestInterface(this.inpitVal)
     .subscribe(value=>{
         console.log(value);
+        //this.RobotReply.push(value.text);  splice(2,0,"Lemon"
+         this.RobotReply.splice(0,0,(this.myData())+'  '+value.text);
+        this.inpitVal='';
     },error=>{
-        console.log('错误回调');
+        console.log('失败回调');
     })
   };
+
+  
 
 }

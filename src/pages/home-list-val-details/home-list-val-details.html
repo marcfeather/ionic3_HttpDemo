@@ -7,12 +7,20 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>home-listVal-details</ion-title>
+    <ion-title>详情分析</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <button (click)="stateGoHome()">跳转首页</button>
+    <button class="list-val-button" (click)="stateGoHome()">跳转首页</button>
+    <br>
+    <br>
+      
+    <button class="list-val-button" (click)="getStartHTTPData()">获取数据(post请求)</button>
+
+    <div style="margin:18px 0;" *ngFor="let val of postHttpDataArr;let i=index;">{{i}}, {{val}}</div>
+
+
 </ion-content>
