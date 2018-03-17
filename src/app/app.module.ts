@@ -10,6 +10,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DemoPage1Page } from '../pages/demo-page1/demo-page1';
+import { LoginPage } from '../pages/login/login';
 
 import { HomeListValPage } from '../pages/home-list-val/home-list-val';
 import { HomeListValDetailsPage } from '../pages/home-list-val-details/home-list-val-details';
@@ -45,7 +46,7 @@ import { ServeProvider } from '../providers/serve/serve';
     TabsPage,
     HomeListValPage,
     HomeListValDetailsPage,
-    
+    LoginPage,
     
 
   ],
@@ -75,7 +76,7 @@ import { ServeProvider } from '../providers/serve/serve';
     TabsPage,
     HomeListValPage,
     HomeListValDetailsPage,
-    
+    LoginPage,
   ],
   providers: [
     StatusBar,

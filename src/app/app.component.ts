@@ -5,6 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
+//登陆
+import { LoginPage } from '../pages/login/login';
+
+
 //储存
 //import{ Storage } from'@ionic/storage';
 
@@ -14,7 +18,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   //默认跳转页面  可以改成登录页面
   
-  rootPage:any = TabsPage;
+  //rootPage:any = TabsPage;
+  rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,) {
     platform.ready().then(() => {

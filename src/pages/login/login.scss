@@ -1,3 +1,17 @@
 page-login {
-
+    .login-concnet{
+        background-image:url(../assets/imgs/login-bg.jpg) ;
+        background-size:100% auto;
+        
+    }
+    img{
+        // width: 100; 
+        // height:auto;
+    }
+    button{
+        opacity:0.8;
+    }
+    .input-cover{
+        background:rgba(0,0,0,0.0) !important
+    }
 }
