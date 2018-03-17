@@ -11,4 +11,11 @@ export class ContactPage {
 
   }
 
+  
+
+  //退出登陆
+  SignOut(){
+    localStorage.removeItem('loginStorageLocalStorage');
+  }
+
 }
