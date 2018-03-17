@@ -10,7 +10,7 @@ import { LoginPage } from '../pages/login/login';
 
 
 //储存
-//import{ Storage } from'@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,9 +19,18 @@ export class MyApp {
   //默认跳转页面  可以改成登录页面
   
   //rootPage:any = TabsPage;
-  rootPage:any = LoginPage;
+  //储存状态
+  rootPage:any = !localStorage.getItem("loginStorageLocalStorage")?LoginPage:TabsPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,public storage:Storage) {
+    this.storage.get('loginStorage').then((val) => {
+      console.log('Your age is', val);
+      if(val){
+          //alert('已经登陆')
+      }else{
+          //alert('没有登录')
+      }
+    });
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -31,7 +40,8 @@ export class MyApp {
       statusBar.overlaysWebView(false);
     // set status bar to white
     //写到这里面
-      statusBar.backgroundColorByHexString('#888888');
+      //statusBar.backgroundColorByHexString('#33000000');//后两位透明色 沉浸式
+      statusBar.backgroundColorByHexString('#888888');//后两位透明色
     });
   }
 }

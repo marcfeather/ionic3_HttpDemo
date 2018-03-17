@@ -21,7 +21,7 @@ import { HomeListValDetailsPage } from '../pages/home-list-val-details/home-list
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { IonicStorageModule } from '@ionic/storage';
 
 //服务
 import { ServeProvider } from '../providers/serve/serve';
@@ -53,6 +53,7 @@ import { ServeProvider } from '../providers/serve/serve';
   imports: [
     BrowserModule,
     HttpClientModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,{
       backButtonText: '',//按钮内容
       backButtonIcon: 'ios-arrow-back',//按钮图标样式
