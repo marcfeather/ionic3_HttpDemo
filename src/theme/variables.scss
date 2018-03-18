@@ -88,6 +88,8 @@ $colors: (
 @import "noto-sans";
 
 
+@import "./icons";
+
 //双击退出toast样式
 .toast-black{
   //background-color:#888888 !important;
@@ -104,5 +106,6 @@ $colors: (
   text-align: center;
 
 }
+
 
 
