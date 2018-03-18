@@ -6,9 +6,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-
+  SignOutButtonShow=false;
   constructor(public navCtrl: NavController) {
 
+  }
+
+  ionViewWillEnter(){
+    if(localStorage.getItem('loginStorageLocalStorage')){
+          this.SignOutButtonShow=true;
+    }else{
+          this.SignOutButtonShow=false;
+    }
+    
   }
 
   
@@ -16,6 +25,11 @@ export class ContactPage {
   //退出登陆
   SignOut(){
     localStorage.removeItem('loginStorageLocalStorage');
+    if(localStorage.getItem('loginStorageLocalStorage')){
+      this.SignOutButtonShow=true;
+      }else{
+       this.SignOutButtonShow=false;
+      }
   }
 
 }

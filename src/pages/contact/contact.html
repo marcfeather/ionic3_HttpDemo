@@ -12,7 +12,7 @@
     <ion-item>
       <ion-icon name="ionic" item-start></ion-icon>
       
-      <button class="disable-hover button button-ios button-default button-default-ios button-block button-block-ios" (click)="SignOut()">
+      <button *ngIf="SignOutButtonShow" class="disable-hover button button-ios button-default button-default-ios button-block button-block-ios" (click)="SignOut()">
         退出登陆
       </button>
     </ion-item>
