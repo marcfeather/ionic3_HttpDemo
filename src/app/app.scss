@@ -29,9 +29,35 @@
 
 
 
-// .ion-md-myIcon:before { 
-//   content: url("../assets/imgs/shu.svg");
-// }
-// .ion-md-myIcon-outline:before { 
-//   content: url("../assets/fonts/people.svg"); 
-// }
+//自定义icon
+ion-icon {  
+    &[class*="appname-"] {  
+        // Instead of using the font-based icons  
+        // We're applying SVG masks  
+        -webkit-mask-size:  contain;  
+        -webkit-mask-repeat: no-repeat;  
+        // mask-position: 50% 50%;          
+        background: currentColor;  
+        width: 1em;  
+        height: 1em;  
+
+       
+    }  
+    // custom icons  
+    &[class*="appname-bendian"] {  
+        -webkit-mask-image: url(../assets/fonts/new_tabs1.svg) !important;  
+        // background-image: url(../assets/fonts/new_taba1.svg); 
+        // background-size:100%;
+    }  
+    &[class*="appname-shouye"] {  
+         -webkit-mask-image: url(../assets/fonts/new_tabs1.svg);    
+          //background-image: url(../assets/fonts/tabsIcon1.png); 
+          // background-size:100%;
+    }  
+    // &[class*="appname-shuju"] {  
+    //     -webkit-mask-image: url(../assets/svg/ryz-shuju.svg);  
+    // }  
+    // &[class*="appname-wode"] {  
+    //     -webkit-mask-image: url(../assets/svg/ryz-wode.svg);  
+    // }  
+}  
