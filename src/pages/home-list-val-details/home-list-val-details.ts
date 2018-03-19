@@ -38,6 +38,14 @@ export class HomeListValDetailsPage {
     });
   }
 
+  //连续返回首页
+  histroyGoHome(){
+    //返回跟模块
+    //this.navCtrl.popToRoot();
+    this.navCtrl.pop();
+   
+  }
+
   //获取数据
   getStartHTTPDataObj={
      key:'2612c5cc42c4408bbc1dbc1f7e7b73f0',
