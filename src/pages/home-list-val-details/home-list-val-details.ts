@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HomePage } from '../../pages/home/home';
 import { TabsPage } from '../../pages/tabs/tabs';
-import { ActionSheetController } from 'ionic-angular';
+import { ActionSheetController ,AlertController} from 'ionic-angular';
 
 import { HomeListValPage } from '../../pages/home-list-val/home-list-val';
 
@@ -11,6 +11,7 @@ import { HomeListValPage } from '../../pages/home-list-val/home-list-val';
 //服务
 import { ServeProvider } from "../../providers/serve/serve";
 import { HttpParams ,} from '@angular/common/http';
+
 
 
 /**
@@ -27,7 +28,13 @@ import { HttpParams ,} from '@angular/common/http';
 })
 export class HomeListValDetailsPage {
   postHttpDataArr=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider,public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public serveProvider:ServeProvider,
+              public actionSheetCtrl: ActionSheetController,
+              public alertCtrl: AlertController,
+  
+  ) {
   }
 
   ionViewDidLoad() {
@@ -64,38 +71,58 @@ export class HomeListValDetailsPage {
           }
         },{
           text: '点击2',
+          role: 'destructive',
           handler: () => {
-            console.log('Archive clicked');
+            console.log('Destructive clicked');
           }
-        },{
+        },
+        {
           text: '点击3',
-          role: 'cancel',
+          role: 'destructive',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Destructive clicked');
           }
-        },{
+        },  
+        {
           text: '点击4',
-          role: 'cancel',
+          role: 'destructive',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Destructive clicked');
           }
-        },{
+        },
+        {
           text: '点击5',
-          role: 'cancel',
+          role: 'destructive',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Destructive clicked');
           }
         },{
           text: '点击6',
-          role: 'cancel',
+          role: 'destructive',
           handler: () => {
-            console.log('Cancel clicked');
+            console.log('Destructive clicked');
           }
-        }
+        },{
+          text: '点击7',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },
       ]
     });
     actionSheet.present();
     
+  }
+
+  //弹框
+  ionicAlert(){
+    let alert = this.alertCtrl.create({
+      title: '弹框',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['好的']
+    });
+    alert.present();
   }
 
   //获取数据
