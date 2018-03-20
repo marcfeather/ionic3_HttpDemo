@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HomePage } from '../../pages/home/home';
 import { TabsPage } from '../../pages/tabs/tabs';
+import { ActionSheetController } from 'ionic-angular';
+
+import { HomeListValPage } from '../../pages/home-list-val/home-list-val';
 
 
 //服务
@@ -24,7 +27,7 @@ import { HttpParams ,} from '@angular/common/http';
 })
 export class HomeListValDetailsPage {
   postHttpDataArr=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider,public actionSheetCtrl: ActionSheetController) {
   }
 
   ionViewDidLoad() {
@@ -41,9 +44,58 @@ export class HomeListValDetailsPage {
   //连续返回首页
   histroyGoHome(){
     //返回跟模块
-    //this.navCtrl.popToRoot();
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
+    //this.navCtrl.pop();
    
+  }
+
+
+  //ActionSheet
+  ActionSheetFun(){
+
+     let actionSheet = this.actionSheetCtrl.create({
+      title: 'title',
+      buttons: [
+        {
+          text: '点击1',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },{
+          text: '点击2',
+          handler: () => {
+            console.log('Archive clicked');
+          }
+        },{
+          text: '点击3',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },{
+          text: '点击4',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },{
+          text: '点击5',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },{
+          text: '点击6',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+    
   }
 
   //获取数据
