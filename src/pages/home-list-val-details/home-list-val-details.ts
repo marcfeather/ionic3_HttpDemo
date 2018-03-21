@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,ActionSheetController ,AlertController,} from 'ionic-angular';
 
 import { HomePage } from '../../pages/home/home';
 import { TabsPage } from '../../pages/tabs/tabs';
-import { ActionSheetController ,AlertController} from 'ionic-angular';
+
 
 import { HomeListValPage } from '../../pages/home-list-val/home-list-val';
 
@@ -115,6 +115,79 @@ export class HomeListValDetailsPage {
     
   }
 
+  //弹框样式2
+  ionicAlert2(){
+    
+      let alert = this.alertCtrl.create();
+      alert.setTitle('标题');
+  
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+      alert.addInput({
+        type: 'radio',
+        label: 'Blue',
+        value: 'blue',
+        checked: false
+      });
+  
+      alert.addButton('取消');
+      alert.addButton({
+        text: '好的',
+        handler: data => {
+          console.log(this);
+          // this.testRadioOpen = false;
+          // this.testRadioResult = data;
+        }
+      });
+      alert.present();
+    
+  }
   //弹框
   ionicAlert(){
     let alert = this.alertCtrl.create({
@@ -147,5 +220,38 @@ export class HomeListValDetailsPage {
           console.log('失败回调');
       })
   }
+
+
+
+
+  //时间选择器
+//   导入import { DatePicker,DatePickerOptions } from '@ionic-native/date-picker';  
+  
+// 通过插件获取日期  
+// DatePickerOptions的设置，可根据个人喜好，实际情况自己选择，具体参照官网。  
+// getDate(){  
+//     let options : DatePickerOptions ={  
+//       date: new Date(),  
+//       mode: 'datetime',  
+//       titleText:'请选择日期',  
+//       okText:'选择',  
+//       cancelText: '取消',  
+//       todayText:'今天',  
+//       nowText: '现在',  
+//       is24Hour:true,  
+//       allowOldDates:true,  
+//       doneButtonLabel:'确定',  
+//       minuteInterval:10,  
+//       androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK   
+//     }  
+//     this.datePicker.show(options).then(  
+//       date => {  
+//         console.log('Got date: ', date);  
+//         alert(date.getSeconds());  
+//         this.dateStr=date.getTime().toString();  
+//       },  
+//       err => console.log('Error occurred while getting date: ', err)  
+//     );  
+//   }  
 
 }

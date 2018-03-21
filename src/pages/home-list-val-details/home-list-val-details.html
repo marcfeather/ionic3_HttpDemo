@@ -26,9 +26,28 @@
     <button class="list-val-button" (click)="ionicAlert()">ionicAlert</button>
     <br>
     <br>
+    <button class="list-val-button" (click)="ionicAlert2()">ionicAlert样式2</button>
+    <br>
+    <br>
     <button class="list-val-button" (click)="getStartHTTPData()">获取数据(post请求)</button>
 
     <div style="margin:18px 0;" *ngFor="let val of postHttpDataArr;let i=index;">{{i}}, {{val}}</div>
 
+    <div>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
 
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>大小限制</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY HH:mm" min="2016" max="2020-10-31" [(ngModel)]="myDate">
+        </ion-datetime>
+      </ion-item>
+      
+    </div>
 </ion-content>
