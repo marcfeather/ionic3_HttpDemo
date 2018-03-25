@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavController } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
@@ -8,34 +8,39 @@ import { DemoPage1Page } from '../demo-page1/demo-page1';
 import { StatusBar } from '@ionic-native/status-bar';
 import {Platform,App,ToastController} from 'ionic-angular';
 
-
+//AboutNestingTabsPage 
+import { AboutNestingTabsPage } from '../../pages/about-nesting-tabs/about-nesting-tabs';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-
+  
   tab1Root = HomePage;
   tab2Root = AboutPage;
+  tab2RootVal = AboutNestingTabsPage;
   tab3Root = ContactPage;
   tab4Root = DemoPage1Page;
 
 
 
-  constructor(public statusBar: StatusBar,public plt: Platform,private toastCtrl: ToastController,private app:App) {
-
-
+  constructor(public statusBar: StatusBar,public plt: Platform,private toastCtrl: ToastController,private app:App,public navCtrl: NavController) {
+    let  tabs3=document.getElementsByClassName('tab-button')[2];
+    // tabs3.addEventListener=()=>{
+    //       console.log('test');
+    // }
+    console.log(tabs3);
   }
-
+  
+  
 
   //生命周期
   ionViewDidEnter(){
     
-
   }
 
 
-
+  //用ionic自己的生命周期函数构造器
   ngOnInit(){
 
 
@@ -46,6 +51,7 @@ export class TabsPage {
     this.plt.registerBackButtonAction(()=>{
       this.goBackLogic();
       console.log('监听右键Boolean值：' + this.checkPage)
+      
       if (this.checkPage) {
         //如果是根目则按照需求1处理
         this.exitApp();
@@ -101,8 +107,13 @@ export class TabsPage {
   }
 
 
+  //点击推荐
+  AboutPageClick(){
+      //this.navCtrl.push(AboutNestingTabsPage);
+      console.log('test');
+  }
 
-
+  
 
 
 }
