@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,EventEmitter,Output} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
@@ -22,14 +22,20 @@ export class TabsPage {
   tab3Root = ContactPage;
   tab4Root = DemoPage1Page;
 
-
+  @Output() click = new EventEmitter();
 
   constructor(public statusBar: StatusBar,public plt: Platform,private toastCtrl: ToastController,private app:App,public navCtrl: NavController) {
     let  tabs3=document.getElementsByClassName('tab-button')[2];
-    // tabs3.addEventListener=()=>{
-    //       console.log('test');
-    // }
+    
     console.log(tabs3);
+  }
+
+  //点击事件
+  tabsClick(event:any){
+    //console.log(event.path[1].id=="tab-t0-2");
+    if(event.path[1].id=="tab-t0-2"){
+          this.navCtrl.push(AboutNestingTabsPage);
+    }
   }
   
   

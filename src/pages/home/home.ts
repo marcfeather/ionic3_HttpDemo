@@ -56,9 +56,9 @@ export class HomePage {
 
 
   ionViewDidEnter(){
-      console.log(document.getElementsByClassName('tab-button')); 
-      let  tabs3=document.getElementsByClassName('tab-button')[2];
-      console.log(tabs3);
+      // console.log(document.getElementsByClassName('tab-button')); 
+      // let  tabs3=document.getElementsByClassName('tab-button')[2];
+      // console.log(tabs3);
   }
 
 }
