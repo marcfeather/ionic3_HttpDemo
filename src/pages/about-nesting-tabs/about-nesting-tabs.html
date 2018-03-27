@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>about-nestingTabs</ion-title>
+    <ion-title>推荐</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-tabs selectedIndex="2">
+        <ion-tab [root]="tab1Root"></ion-tab>
+        <ion-tab [root]="tab2Root"></ion-tab>
+        <ion-tab [root]="tab3Root"></ion-tab>
+      </ion-tabs>
 </ion-content>
+
+    
