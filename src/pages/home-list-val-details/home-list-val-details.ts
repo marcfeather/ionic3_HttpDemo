@@ -27,7 +27,7 @@ import { HttpParams ,} from '@angular/common/http';
   templateUrl: 'home-list-val-details.html',
 })
 export class HomeListValDetailsPage {
-  postHttpDataArr=[];
+  postHttpDataArr=[1,2,3,4,5,6,7,8,9];
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public serveProvider:ServeProvider,
@@ -213,6 +213,7 @@ export class HomeListValDetailsPage {
       this.serveProvider.rxjsPostRequestInterface(this.getStartHTTPDataObj)
       .subscribe(value=>{
           console.log(value);
+          
           this.postHttpDataArr.splice(0,0,value.text);
           //alert(JSON.stringify(value));
       },error=>{
