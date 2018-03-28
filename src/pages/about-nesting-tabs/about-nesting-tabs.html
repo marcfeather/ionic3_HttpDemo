@@ -14,11 +14,12 @@
 
 
 <ion-content padding>
-  
+      <ion-tabs selectedIndex="1">
+        <ion-tab [root]="tabsroot" tabTitle="首页" tabIcon="ios-albums" ></ion-tab>
+        <ion-tab [root]="tabsroot" tabTitle="发现" tabIcon="ios-appstore"></ion-tab>
+        <ion-tab [root]="tabsroot" tabTitle="发现" tabIcon="ios-attach"></ion-tab>
+        <ion-tab [root]="tabsroot" tabTitle="发现" tabIcon="ios-at"></ion-tab>
+       </ion-tabs>
 </ion-content>
 
-<ion-tabs selectedIndex="1">
-    <ion-tab [root]="tab1"></ion-tab>
-    <ion-tab [root]="tab2Root"></ion-tab>
-    <ion-tab [root]="tab3Root"></ion-tab>
-</ion-tabs>
+

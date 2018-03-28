@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AboutPage } from '../pages/about/about';
 import { AboutNestingTabsPage } from '../pages/about-nesting-tabs/about-nesting-tabs';
+import { AboutNestingTabsValPage } from '../pages/about-nesting-tabs-val/about-nesting-tabs-val'; 
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -42,6 +43,7 @@ import { ServeProvider } from '../providers/serve/serve';
     MyApp,
     AboutPage,
     AboutNestingTabsPage,
+    AboutNestingTabsValPage,
     ContactPage,
     HomePage,
     DemoPage1Page,
@@ -74,6 +76,7 @@ import { ServeProvider } from '../providers/serve/serve';
     MyApp,
     AboutPage,
     AboutNestingTabsPage,
+    AboutNestingTabsValPage,
     ContactPage,
     HomePage,
     DemoPage1Page,

@@ -2,6 +2,10 @@ page-contact {
   .toolbar-title-md{
     text-align:center !important;
   }
+  .diy-icon-right{
+    position:absolute;
+    right:0;
+  }
   .back-button.show-back-button{
     position: absolute;
     z-index:4;
@@ -9,5 +13,10 @@ page-contact {
   .back-button.show-back-button{
     position: absolute;
     z-index:4;
+  }
+
+  .menu-inner{
+    // position:relative;
+    // z-index:6 !important;
   }
 }

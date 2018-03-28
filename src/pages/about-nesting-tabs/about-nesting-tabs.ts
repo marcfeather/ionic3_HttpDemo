@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HomeListValPage } from '../home-list-val/home-list-val';
+
+import { AboutNestingTabsValPage } from '../about-nesting-tabs-val/about-nesting-tabs-val'; 
 /**
  * Generated class for the AboutNestingTabsPage page.
  *
@@ -15,7 +17,7 @@ import { HomeListValPage } from '../home-list-val/home-list-val';
   templateUrl: 'about-nesting-tabs.html',
 })
 export class AboutNestingTabsPage {
-  tab1 = HomeListValPage;
+  tabsroot = AboutNestingTabsValPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
    
