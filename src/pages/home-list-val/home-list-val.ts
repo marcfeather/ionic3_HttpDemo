@@ -27,9 +27,13 @@ export class HomeListValPage {
   
   inpitVal:string;
   RobotReply=[];
+  demoObiectstring='233';
 
+  demoObjectstr;
   
-  demoObiectstring;
+  demoObject={
+    stringVal:'666',
+  }
   
   
   constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider){
@@ -37,9 +41,14 @@ export class HomeListValPage {
 
   ionViewDidLoad(){
     console.log('ionViewDidLoad HomeListValPage');
-    //   this.here={
-    //   demostring:'对象传值',
-    // };
+   
+    //this.demoObjectstr=this.demoObject.stringVal;
+    //this.demoObjectstr=this.demoObject;
+    let  demoObjectstrArr=[{id:'233'}];
+    
+    this.demoObjectstr=demoObjectstrArr[0];
+    console.log(this.demoObjectstr);
+    
    
   }
 
