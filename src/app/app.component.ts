@@ -16,6 +16,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'app.html'
 })
 export class MyApp {
+  
   //默认跳转页面  可以改成登录页面
   
   //rootPage:any = TabsPage;

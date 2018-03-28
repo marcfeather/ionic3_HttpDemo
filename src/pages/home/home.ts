@@ -11,7 +11,7 @@ import { HomeListValPage } from '../home-list-val/home-list-val';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage { 
 
   constructor(public navCtrl: NavController) {
 

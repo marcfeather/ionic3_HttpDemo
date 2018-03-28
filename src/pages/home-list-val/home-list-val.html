@@ -13,10 +13,11 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content>
   <div style="position:fixed;width:100%;height:auto;z-index:6;">
   <button (click)="stateGoDetails()" class="list-val-button">点击跳转</button>
-
+  <!--<div  [counter]="demoObiect"></div>-->
+  数据绑定:
   
   <ion-item>
     <ion-label fixed>输入问题</ion-label>
@@ -28,6 +29,7 @@
   
   <!--列表-->
   <div padding>
+  
      <div style="height:80px;"></div>
      <div style="height:80px;"></div>
      <div style="min-height:44px;margin:10px 0;;" *ngFor="let item of RobotReply;let i=index;trackBy:trackByItem; ">{{i+1}} , {{item}}</div>
@@ -35,7 +37,7 @@
   </div>
  
  
-    
+
 </ion-content>
  
   <div class="listValBottomButtondiv">

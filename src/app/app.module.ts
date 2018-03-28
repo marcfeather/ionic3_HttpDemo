@@ -32,6 +32,11 @@ import { ServeProvider } from '../providers/serve/serve';
 
 
 
+//配置文件
+
+ let  configObject: Object={
+    demo233:'233'
+};  
 
 
 

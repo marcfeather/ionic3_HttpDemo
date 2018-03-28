@@ -15,23 +15,32 @@ import { HttpParams} from '@angular/common/http';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+// @IonicPage()
+
 @Component({
   selector: 'page-home-list-val',
   templateUrl: 'home-list-val.html',
 })
 export class HomeListValPage {
   //inpit 值
-  //@Input()
+  //@Input() here;
+  
   inpitVal:string;
   RobotReply=[];
+
+  
+  demoObiectstring;
+  
   
   constructor(public navCtrl: NavController, public navParams: NavParams,public serveProvider:ServeProvider){
   }
 
   ionViewDidLoad(){
     console.log('ionViewDidLoad HomeListValPage');
-    
+    //   this.here={
+    //   demostring:'对象传值',
+    // };
+   
   }
 
   stateGoDetails(){

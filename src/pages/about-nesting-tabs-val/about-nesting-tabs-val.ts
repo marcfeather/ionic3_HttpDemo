@@ -19,7 +19,7 @@ export class AboutNestingTabsValPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutNestingTabsValPage');
+    console.log();
   }
 
 }
